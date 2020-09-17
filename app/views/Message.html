@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8"></meta>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+    <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
+    <title>メッセージ</title>
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="text-center" id="pagetitle">メッセージ保管庫</h1>
+                <h1>{% if current_user %}{{ "こんにちは、" + current_user + "さん"}}{% endif %}</h1>
+                <input type="text" class="form-control" id="message" placeholder="メッセージを入力">
+                <button class="btn btn-default" id="button">送信</button>
+                <button class="btn btn-default" id="clearbutton">記録削除</button>
+                <button class="btn btn-default" id="logout">ログアウト</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>メッセージ</h3>
+            </div>
+            <div class="col-sm-12" id="log">
+                <h3></h3>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js "></script>
+    <script src="../static/js/showmessage.js "></script>
+</body>
+
+</html>
